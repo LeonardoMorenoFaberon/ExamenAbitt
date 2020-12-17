@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="radioSelected.css">
+</head>
+<body>
+    <form action="#" method="GET">
+
+
+
+        
+        <!-- input*4[type=radio][name=u][id=universidad$][value=opcion$]>label[for=universidad$]{opcion$}br   -->
+        <label for="">estamos viendo</label><br>
+        <input type="radio" name="u" id="universidad1" value="opcion1"><label for="universidad1">opcion1</label><br>
+        <input type="radio" name="u" id="universidad2" value="opcion2"><label for="universidad2">opcion2</label><br>
+        <input type="radio" name="u" id="universidad3" value="opcion3"><label for="universidad3">opcion3</label><br>
+        <input type="radio" name="u" id="universidad4" value="opcion4"><label for="universidad4">Jenny Blighe</label><br>
+        
+        <input type="submit">
+    </form>
+</body>
+<script>
+
+// document.getElementById('universidad1').classList.add('hola');
+    console.log(document.getElementById('universidad1').attributes);
+
+    // document.getElementById('univerdidad1').nodeName.attributes.checked; //nunca funcionara asi.
+    // document.getElementById('universidad1').setAttribute("checked" ,"true");
+    // NamedNodeMap
+    
+    let radios = [
+        document.getElementById("universidad1"), 
+        document.getElementById("universidad2"),
+        document.getElementById("universidad3"), 
+        document.getElementById("universidad4")
+    ]
+
+    setearRadioChecheado(radios[3]);
+
+    function setearRadioChecheado( elemento ){
+        elemento.setAttribute("checked" , "true");
+    }
+
+
+ 
+    for(radio in radios) {
+    radios[radio].onclick = function() {
+        if(this.checked){
+              alert(this.value);     
+            }
+        }
+    }
+
+
+
+</script>
+</html>

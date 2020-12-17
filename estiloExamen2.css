@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --color_fondo : #CB9650;     /* #F0EBF8; color fondo de google forms*/
+    --color_btn_enviar :#673AB7; /* #673AB7; morado boton google forms*/
+    --color_pregunta : #808080;    
+    /* --color_pregunta : red;     */
+ 
+}
+body{
+    background-color:var(--color_fondo);
+}
+/*-------------------------*/
+.nota_examen{
+    position:   absolute;
+    top: 5PX;
+    left: 75%;
+}
+@media (max-width: 400px) /*and (orientation: landscape)*/{
+    .nota_examen_bonita {
+        position: absolute;
+        top: 5px;
+        left: 82%;
+        font-size: 4rem;
+        border-radius: 50%;
+        border: 1px solid black;
+        display: none;
+    }
+}
+
+.nota_examen_bonita {
+    position: absolute;
+    top: 5px;
+    left: 82%;
+    font-size: 4rem;
+    border-radius: 50%;
+    border: 1px solid black;
+    /* display: none; */
+}
+
+.ocultar{
+    display: none;
+}
+.tabla_encabezado{
+    transform: scale(0.7462686567);
+    display: flex;
+    justify-content: center;
+}
+#imgLogoAbit{
+    width: 60px;
+}
+.dni_fecha{
+    display: flex;
+
+    justify-content: space-around;
+    text-align: center;
+}
+
+td div div{
+    width: 100px;
+}
+th , td{
+    border: 1px solid var(--color_btn_enviar);
+}
+th{
+    width:  30vw;
+}
+.abittNOMBRE{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.llenar{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+/*--------------------*/
+
+
+
+
+.formpreguntas {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:var(--color_fondo);
+}
+
+.formpreguntas div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 78px;
+    margin-left:0 ; /*25%;*/
+    margin-bottom: 50px;
+   }
+.targetaPregunta{
+    /* background-color: burlywood; */
+
+}
+
+.contenedorPregunta{
+    background-color: var(--color_pregunta);
+}
+.formpreguntas input[type=radio]{
+    display: none;
+}
+
+.formpreguntas div p {
+    color: white;
+    font-size: 1.1rem;
+    margin-left: -70px;
+}
+
+.formpreguntas div>div {
+    /* display: flex;
+    flex-direction: row;
+    line-height: 30px;
+    margin-left: -75px;
+    align-items: center;
+    margin-bottom: 2px;
+    border: 1px solid white;
+    padding-left: 0px;
+    min-height: 4rem; */
+
+
+    display: flex;
+    flex-direction: row;
+    line-height: 1rem;
+    height: fit-content;
+    min-height: 4rem;
+    margin-left: -75px;
+    margin-bottom: 2px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    align-items: center;
+    border: 1px solid white;
+}
+
+
+.formpreguntas div>div:nth-child(even){
+    /* background-color: black; */
+}
+
+.formpreguntas div label{
+    width: 94%;
+    height: 70px;
+    color: white;
+    padding-left: 10px;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* @media (min-width: 600px) and (orientation: landscape) {
+
+    .formpreguntas div img .ampliar{
+        width: 600px;
+    }
+} */
+
+@media (min-width: 600px) /*and (orientation: landscape)*/ {
+    .ampliarIfMore600{
+        /* width: 600px; */
+        width: 50vw;
+    }
+}
+
+@media (max-width:600px){
+    .ampliarIfMore600{
+        width:95vw;
+    }
+}
+
+.formpreguntas div img{
+    margin-left:-73px; /*25px; */
+}
+.formpreguntas input[type=submit]{
+    border-radius: 10px;
+    height: 100px;
+    font-size: 2rem;
+    margin-bottom: 100px;
+    width:70%;
+    margin-left: 15%;
+    background-color:#673AB7;
+    color: white;
+}
+
+/* input:checked + label {
+    color: red;
+    box-shadow: 0 0 0 3px orange;
+  } 
+    input[type="radio"]:checked {
+    box-shadow: 0 0 0 3px orange;
+  }
+  */
+
+  /* input:checked+ label{
+    border: 3px solid blue;
+}   */
+
+.incorrecta{
+    border: 3px solid red;
+}
+
+ input[type=radio]:checked {
+     box-shadow: 0 0 0 3px orange;
+ }
+
+ .correcta{
+     border:3px solid blue;
+ }
+
+
+
+
+

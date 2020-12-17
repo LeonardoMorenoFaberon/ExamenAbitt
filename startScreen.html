@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilosDatos.css">
+</head>
+<body onload="cargar()">
+    <header class="cabeceraDatos">
+        <img class="logotipoEntrada" src="./logoAbitt.png" alt="logo">
+        <h1>A & B INDUSTRIAL TRAINING AND TRADING S.A.C.</h1>
+    </header>
+    <form class="formularioEntrada" action="#" method="GET">
+        <div class="formularioEntrada--columna2">
+            <p>Llena tus Datos:</p>
+            <label for="nombre1">Primer Nombre:</label>
+            <input type="text" placeholder="Primer Nombre" name="nombre1" />
+
+            <label for="nombre2">Segundo Nombre:</label>
+            <input type="text" placeholder="Segundo Nombre" name="nombre2" />
+
+            <label for="apellido1">Apellido Paterno:</label>
+            <input type="text" placeholder="Apellido Paterno" name="apellido1" />
+            
+            <label for="apellido2">Apellido Materno:</label>
+            <input type="text" placeholder="Apellido Materno" name="apellido2" />
+
+            <label for="telefono">telefono:</label>
+            <input type="number" placeholder="telefono" name="telefono" />
+
+            <label for="dni">dni:</label>
+            <input type="number" placeholder="dni" name="dni" />
+            
+            <select   name="provincia" id="">
+                <option value="">Seleccione un Curso...</option>
+                <!-- 
+                <option value="1">option1</option>
+                <option value="1">option1</option>
+                <option value="2">option2</option>
+                -->
+            </select>
+ 
+         </div>
+
+        <input type="submit" value="Enviar">
+    </form>    
+    <script>
+        function cargar(){ //esta function carga cuando carga el body
+            cargar_provincias();
+        }
+
+        function cargar_provincias(){
+            var array=['Grua Puente Operador' , 'Grua Brazo Articulado Operador' , "Grua Movil Operador" , "Grua Torre Operador" , "Montacargas Operador" , "Manlift Operador"];
+            //Ordena el array alfabeticamente.
+            array.sort();
+            //
+            addOptions("provincia", array);
+        }
+
+        function addOptions(domElement , array){
+            var select = document.getElementsByName(domElement)[0];
+
+            for(value in array){
+                var option = document.createElement("option");
+                option.text= array[value];
+                select.add(option);
+            }
+        }
+       
+    </script>
+</body>
+</html>

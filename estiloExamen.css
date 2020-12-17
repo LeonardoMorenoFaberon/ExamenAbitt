@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*-------------------------*/
+.nota_examen{
+    position:   absolute;
+    top: 5PX;
+    left: 75%;
+}
+
+.nota_examen_bonita{
+    position: absolute;
+    top: 5px;
+    left: 75%;
+    font-size: 10rem;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.ocultar{
+    display: none;
+}
+.tabla_encabezado{
+    display: flex;
+    justify-content: center;
+}
+#imgLogoAbit{
+    width: 60px;
+}
+.dni_fecha{
+    display: flex;
+
+    justify-content: space-around;
+    text-align: center;
+}
+
+td div div{
+    width: 100px;
+}
+th , td{
+    border: 1px solid bisque;
+}
+th{
+    width:  30vw;
+}
+.abittNOMBRE{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.llenar{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+/*--------------------*/
+
+
+
+
+.formpreguntas {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: skyblue;
+}
+
+.formpreguntas div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left:25%;
+    margin-bottom: 50px;
+}
+
+.formpreguntas div p {
+    color: white;
+    font-size: 1.1rem;
+    margin-left: -50px;
+}
+
+.formpreguntas div>div{
+    display: flex;
+    flex-direction: row;
+    line-height: 30px;
+    margin-left: -150px;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.formpreguntas div label{
+    width: 70%;
+    color: white;
+    padding-left: 10px;
+    box-sizing: content-box;
+}
+.formpreguntas div img{
+    margin-left: 25px;
+}
+.formpreguntas input[type=submit]{
+    border-radius: 10px;
+    height: 100px;
+    font-size: 2rem;
+    margin-bottom: 100px;
+    width:70%;
+    margin-left: 20%;
+}
+
+/* input:checked + label {
+    color: red;
+    box-shadow: 0 0 0 3px orange;
+  } 
+    input[type="radio"]:checked {
+    box-shadow: 0 0 0 3px orange;
+  }
+  */
+
+  /* input:checked+ label{
+    border: 3px solid blue;
+}   */
+
+.incorrecta{
+    border: 3px solid red;
+}
+
+ input[type=radio]:checked {
+     box-shadow: 0 0 0 3px orange;
+ }
+
+ .correcta{
+     border:3px solid blue;
+ }
+
+
+
+
+

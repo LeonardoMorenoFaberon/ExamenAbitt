@@ -1,0 +1,526 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion ABITT</title>
+    <link rel="icon" href="./logoAbitt.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="estiloExamen2.css">
+    <link rel="stylesheet" type="text/css" href="estiloExamen2.css" media="print">
+    <script src="Supervisor.js"></script>
+    <script src="montacargas.js"></script>
+    <script src="manlift.js"></script>
+</head>
+<body>
+    <header>
+    </header>
+
+    <main>
+        <table class="tabla_encabezado"> 
+
+            <tr>
+               <th id="tituloDeExamen">SUPERVISOR DE IZAJE</th>
+               <th ><img id="imgLogoAbit" src="./logoAbitt.png" alt="" ></th>
+               <th>v: 02-2020</th>
+            </tr>
+            <!-- tr>td{dato$} -->
+            <tr>
+                <td>
+                    <div class="participante titulo">nombre completo:</div><div id="participante_Llenar" class="participante llenar">Ricardo Nava Pezantes</div>
+                </td>
+
+                <td>
+                    <div class="dni_fecha">
+                        <div class="dni">
+                            <div class="dni titulo">dni:</div><div id="dni_Llenar" class="dni llenar">20154879</div>
+                        </div>
+                        <div class="fecha"> 
+                            <div class="fecha titulo">fecha:</div> <div id="fecha_Llenar" class="fecha llenar">20-02-2020</div>
+                        </div>    
+                    </div>
+                </td>
+
+                <td>
+                    <div class="empresa titulo">Empresa:</div><div id="empresa_Llenar" class="empresa llenar">Confipetrol</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div class="fotocheck titulo">fotocheck:</div><div id="fotocheck_Llenar" class="fotocheck llenar">45692178</div>
+                </td>
+                <td class="abittNOMBRE">A & B Industrial Training and Trading S.A.C.</td>
+                <td>
+                    <div class="firma titulo">firma:</div><div class="firma llenar"> </div> 
+                </td>
+            </tr>
+            <!-- tr>td{datoFila3$}*4 -->
+    </table>
+
+    <!-- 
+        <img id="nota_examen" src="./notas_examen/ochenta.png" alt="" class="nota_examen">     
+    -->
+    
+    <div class="nota_examen">
+        <img id="centenas" src="" alt=""  class="nota">      
+        <img id="decenas" src="" alt=""  class="nota">      
+        <img id="unidades" src="" alt=""  class="nota">      
+    </div>
+
+    <div id="nota_bonita" class="nota_examen_bonita">
+
+    </div>
+        </section>
+        
+        <form class="formpreguntas" method="GET" action="#" id="contenedordePreguntas">
+            
+            <!-- <div>
+                <p><span>1.-</span>¿De quién recibirá el operador la señal de parada de emergencia?</p>
+                <label for="preg_uno_a"><input id="preg_uno_a"  type="radio" name="preg_uno" value="a" /> 
+                    a) Solo de rigger</label>
+                <label for="preg_uno_b"><input id="preg_uno_b"  type="radio" name="preg_uno" value="b" /> 
+                    b) solo de su supervisor.</label>
+                <label for="preg_uno_c"><input id="preg_uno_c"  type="radio" name="preg_uno" value="c" /> 
+                    c) De cualquier persona que vea algún peligro en el área de Izaje.</label>
+                <label for="preg_uno_d"><input id="preg_uno_d"  type="radio" name="preg_uno" value="d" /> 
+                    d) Solo del rigger y del supervisor.</label>    
+            </div>     
+            
+            <div>
+                <p><span>2.-</span>¿Qué debe de tomar en cuenta el operador cuando deja una carga suspendida?</p>
+                <label for="preg_dos_a"><input id="preg_dos_a"  type="radio" name="preg_dos" value="a" /> 
+                    a) Que no haya personas cerca o debajo de la carga.</label>
+                <label for="preg_dos_b"><input id="preg_dos_b"  type="radio" name="preg_dos" value="b" /> 
+                    b) Que no esté muy arriba la carga.</label>
+                <label for="preg_dos_c"><input id="preg_dos_c"  type="radio" name="preg_dos" value="c" /> 
+                    c) Que la carga este estable.</label>
+                <label for="preg_dos_d"><input id="preg_dos_d"  type="radio" name="preg_dos" value="d" /> 
+                    d) No debe de dejar la carga suspendida por ningún motivo.</label>    
+            </div>
+            
+            -->
+
+
+
+            <!-- <input type="submit" value="enviar" > -->
+        </form>
+        
+    </main>
+</body>
+    
+    <script>
+
+    let examen = new supervisor();
+    // let examen =  new manlift();
+    // let examen = new montacarga();
+    
+
+    cargarExamen(examen.preguntas , examen.titulo);    
+    cargarDatosParticipante('Leonardo Moreno Faberon' , '10797905' , '14-08-2021' , 'LEMOF.sa.' , '204569875');
+    
+    let letrasOpciones = [ 'a' , 'b' , 'c' , 'd'];    
+        
+    const enumerador = [
+        {num:'uno'},
+        {num:'dos'},
+        {num:'tres'},
+        {num:'cuatro'},
+        {num:'cinco'},
+        {num:'seis'},
+        {num:'siete'},
+        {num:'ocho'},
+        {num:'nueve'},
+        {num:'diez'},
+        {num:'once'},
+        {num:'doce'},
+        {num:'trece'},
+        {num:'catorce'},
+        {num:'quince'},
+        {num:'dieciseis'},
+        {num:'diecisiete'},
+        {num:'dieciocho'},
+        {num:'diecinueve'},
+        {num:'veinte'},
+        {num:'veintiuno'},
+        {num:'veintidos'},
+        {num:'veintitres'},
+        {num:'veinticuatro'},
+        {num:'veinticinco'},
+        {num:'veintiseis'},
+        {num:'veintisiete'},
+        {num:'veintiocho'},
+        {num:'veintinueve'},
+        {num:'treinta'},
+        {num:'treintaiuno'},
+        {num:'treintaidos'},
+        {num:'treintaitres'},
+        {num:'treintaicuatro'},
+        {num:'treintaicinco'},
+        {num:'treintaiseis'},
+        {num:'treintaisiete'},
+        {num:'treintaiocho'},
+        {num:'treintainueve'},
+        {num:'cuarenta'},
+        {num:'cuarentaiuno'},
+        {num:'cuarentaidos'},
+        {num:'cuarentaitres'},
+        {num:'cuarentaicuatro'},
+        {num:'cuarentaicinco'},
+        {num:'cuarentaiseis'},
+        {num:'cuarentaisiete'},
+        {num:'cuarentaiocho'},
+        {num:'cuarentainueve'},
+        {num:'cincuienta'},
+        {num:'cincuientaiuno'},
+        {num:'cincuientaidos'},
+        {num:'cincuientaitres'},
+        {num:'cincuientaicuatro'},
+        {num:'cincuientaicinco'},
+        {num:'cincuientaiseis'},
+        {num:'cincuientaisiete'},
+        {num:'cincuientaiocho'},
+        {num:'cincuientainueve'},
+        {num:'sesenta'},        
+    ]
+     
+    function cargarExamen( examen ,titulo){
+        PregDeTurno = examen;
+        document.getElementById('tituloDeExamen').innerHTML = titulo;
+    }
+
+    function cargarDatosParticipante(nombre , dni , fecha , empresa  ,  fotocheck){
+        document.getElementById('participante_Llenar').innerHTML = nombre;
+        document.getElementById('dni_Llenar').innerHTML = dni;
+        document.getElementById('fecha_Llenar').innerHTML= fecha;
+        document.getElementById('empresa_Llenar').innerHTML = empresa;
+        document.getElementById('fotocheck_Llenar').innerHTML = fotocheck;
+    }
+    const formPreguntas = document.getElementById('contenedordePreguntas');
+        // const divPreguntas = divPregunta.innerHTML ;
+
+    const fragment = document.createDocumentFragment();
+        
+    let alternativas = [];
+    // --------------------
+    for(var i=0; i<PregDeTurno.length; i++){
+        var imagen = '';
+        var alt_a  = '';
+        var alt_b =  '';
+        var alt_c  = '';
+        var alt_d  = '';
+        
+
+        if(PregDeTurno[i].a){
+            alt_a = 
+            `<div class="targetaPregunta">
+                <input  id="preg_${enumerador[i].num}_a"  type="radio" name="preg_${enumerador[i].num}" value="a" onclick ="estado(this)" />
+                <label id="preg_${enumerador[i].num}_a_label" for="preg_${enumerador[i].num}_a">${PregDeTurno[i].a}</label>
+            </div>`;
+
+            // alternativas.push(document.getElementById(`preg_${enumerador[i].num}_a`));
+            
+        }
+        if(PregDeTurno[i].b){
+            alt_b = 
+            `<div class="targetaPregunta">
+                <input id="preg_${enumerador[i].num}_b"  type="radio" name="preg_${enumerador[i].num}" value="b"  onclick ="estado(this)"/> 
+                <label id="preg_${enumerador[i].num}_b_label" for="preg_${enumerador[i].num}_b">${PregDeTurno[i].b}</label>
+            </div>`;
+        }
+
+        if(PregDeTurno[i].c){
+            alt_c = 
+            `<div class="targetaPregunta">
+                <input id="preg_${enumerador[i].num}_c"  type="radio" name="preg_${enumerador[i].num}" value="c"  onclick ="estado(this)"/>
+                <label id="preg_${enumerador[i].num}_c_label" for="preg_${enumerador[i].num}_c">${PregDeTurno[i].c}</label>
+            </div>`;
+        }
+
+        if(PregDeTurno[i].d){
+            alt_d =  
+            `<div class="targetaPregunta">
+                <input id="preg_${enumerador[i].num}_d"  type="radio" name="preg_${enumerador[i].num}" value="d"  onclick ="estado(this)"/>
+                <label id="preg_${enumerador[i].num}_d_label" for="preg_${enumerador[i].num}_d">${PregDeTurno[i].d}</label>
+            </div>`;
+        }
+
+
+        //ponemos ancho por default 320px
+        var anchoImagenDefault ;
+        var classAmpliarImagen = `class="ampliarIfMore600"`;
+        var propsAdicionales ;
+        //si la propiedad ancho imagen viene seteada la usamos tal cual.
+        //si no viene setteada usamos anchoImagenDefault.
+        if(PregDeTurno[i].anchoImg){
+            anchoImagenDefault = `width="${PregDeTurno[i].anchoImg}"`;
+            propsAdicionales = anchoImagenDefault;
+        }else{
+            // anchoImagenDefault como anchoImg vino vacio le dejamos el valor default.
+        //    propsAdicionales = anchoImagenDefault + " " + classAmpliarImagen; 
+           propsAdicionales =  classAmpliarImagen; 
+        }
+
+
+        if(PregDeTurno[i].img){
+            var imagen = document.createElement('img');
+
+            imagen = `<img  id="${enumerador[i].num}_imagen" src="${PregDeTurno[i].img}" alt="" ${propsAdicionales}>`;
+            console.log(imagen);
+            // document.getElementById(`${enumerador[i].num}_imagen`).classList.add('ampliar');
+            }
+
+
+
+
+    var contenedorPregunta =     document.createElement('div');
+        contenedorPregunta.innerHTML = contenedorPregunta.innerHTML + `<p><span>${i+1}.-</span>${PregDeTurno[i].preg}</p>`;
+        contenedorPregunta.innerHTML = contenedorPregunta.innerHTML + 
+                    alt_a
+                    +
+                    alt_b
+                    +
+                    alt_c
+                    +
+                    alt_d
+                    +
+                    imagen        
+                   
+        contenedorPregunta.classList.add('contenedorPregunta');
+ 
+        fragment.appendChild(contenedorPregunta);
+  
+    
+       // ---------------
+                    }
+
+
+        // console.log(fragment);
+
+
+        formPreguntas.appendChild(fragment);
+       
+        /*agregando el boton al final de las preguntas.*/
+        formPreguntas.innerHTML = formPreguntas.innerHTML + `<input type="submit" value="Enviar" >`;
+   
+
+        for(var i= 0; i< PregDeTurno.length ; i++){
+            alternativas[i]=[];
+            PregDeTurno[i].a ? alternativas[i].push(document.getElementById(`preg_${enumerador[i].num}_a`)) : ''; 
+            PregDeTurno[i].b ? alternativas[i].push(document.getElementById(`preg_${enumerador[i].num}_b`)) : '';
+            PregDeTurno[i].c ? alternativas[i].push(document.getElementById(`preg_${enumerador[i].num}_c`)) : '';
+            PregDeTurno[i].d ? alternativas[i].push(document.getElementById(`preg_${enumerador[i].num}_d`)) : '';
+            
+            };
+
+    //PARA MANIPULAR WIDTH DE imagenes...... :    
+            // for( var i= 0; i< examen.preguntas.length ; i++){
+            //     if(document.getElementById(`${enumerador[i].num}_imagen`)){
+            //         document.getElementById(`${enumerador[i].num}_imagen`).classList.add('ampliar');
+            //     }
+            // }
+
+    
+
+        // let buenas = 0;
+        // let malas = 0;
+
+        function estado(elemento){
+            var orden = getOrdenOfElement(elemento); //elemento.id.substring(5,elemento.id.length-2);
+            console.log(`Estamos en la pregunta cuyo orden es : ${orden} `) ;
+            var valor = getValueOfElement(elemento);
+            console.log(`la alternativa marcada es: ${valor}`);
+            // var numeroPregunta ;
+            for(var i =0 ; i< PregDeTurno.length; i++){
+              if(enumerador[i].num == orden){
+                        // console.log(`el numeroPregunta expresado en numeros es: ${i}`);      
+                        // numeroPregunta= i; 
+                        console.log('correcta : ' + PregDeTurno[i].correcta);   
+                        console.log( PregDeTurno[i].correcta == valor);
+                         
+                      //RECORREMOS TODAS LAS PREGUNTAS Y LES QUITAMOS LAS MARCAS:
+                        quitarClassIncorrectaYCorrectaCSS(orden , valor);
+
+                      //VALIDAMOS QUE LAS ALTERNATIVAS SEAN CORRECTAS O INCORRECTAS:
+                      marcando(i ,  valor)
+                }
+             }
+             
+             notaPretendida(getNota());
+        }
+        
+        var acumularBuenas = 0;
+        
+        
+        function getNota(){
+            acumularBuenas = 0;
+            for(var i = 0 ; i< PregDeTurno.length ; i++){
+            acumularBuenas = acumularBuenas + PregDeTurno[i].buena;
+            }
+          console.log(`El total de buenas es : ${acumularBuenas}`);  
+          console.log( `la nota sera :  ` + acumularBuenas / PregDeTurno.length );
+          
+          return Math.trunc( acumularBuenas / PregDeTurno.length * 100 );
+        }
+
+
+
+        //QUITAR CLASS CSS INCORRECTO Y CLASS CORRECTO SI NO HA SIDO ELEGIDO POR SI ACASO FUE ELGIDO PREVIAMENTE.
+        function quitarClassIncorrectaYCorrectaCSS(orden , valor){
+            for(var n = 0; n < letrasOpciones.length ; n++){
+                //VAMOS QUITAR MARCAS DE LAS ALTERNATIVAS NO ELEGIDAS:
+                if( letrasOpciones[n] != valor  ){
+                   //VALIDAMOS QUE LA ALTERNATIVA DE TURNO EXISTA ANTES DE PRETENDER MODIFICARLA:     
+                    if( document.getElementById(`preg_${orden}_${letrasOpciones[n]}`) ) {
+
+                        document.getElementById(`preg_${orden}_${letrasOpciones[n]}` +"_label").classList.remove('incorrecta');
+                        document.getElementById(`preg_${orden}_${letrasOpciones[n]}_label`).classList.remove('correcta');   
+   
+                    }
+                    
+                }
+            }            
+        }
+
+        function getOrdenOfElement(elemento){
+            return  elemento.id.substring( 5 , elemento.id.length-2 )
+        }
+        function getValueOfElement( elemento ){
+            return elemento.value;
+        }
+        function isCorrectRspt( elemento ){
+            for(var i =0 ; i< PregDeTurno.length; i++){
+                console.log( enumerador[i].num == elemento.id );
+            }
+        }
+
+
+    //marcando inicio------------------------------------
+    function marcando(numPreg ,  option){
+
+        let elemento         = document.getElementById('preg_' + enumerador[numPreg].num + '_' + option);
+        let elementoEtiqueta = document.getElementById('preg_' + enumerador[numPreg].num + '_' + option + '_label');
+        
+        if(PregDeTurno[numPreg].correcta == elemento.value){
+            elementoEtiqueta.classList.add('correcta');  
+            PregDeTurno[numPreg].buena= 1;  
+        }else{
+            elementoEtiqueta.classList.add('incorrecta');
+            PregDeTurno[numPreg].buena = 0;
+        }
+	    
+
+        document.getElementById('preg_' + enumerador[numPreg].num + '_' + option).setAttribute('checked', 'true');
+	}
+    //marcando fin---------------------------------------
+
+
+    function marcandoAleatoriamente(){
+
+        for(var i= 0 ; i < PregDeTurno.length ; i++){
+            if(PregDeTurno[i].c){  // si existe c tambien d entonces consideramos  0 1 2 3 .
+                marcando(i , letrasOpciones[Math.round(Math.random(0 , 4)*3)]);
+            }else{                     // si no existe c tampoco d entonces solo consideramos 0 1 
+                marcando(i , letrasOpciones[Math.round(Math.random(0 , 4)*1)]);
+            }
+        
+        }
+    }
+    // marcandoAleatoriamente();
+
+
+
+//    notaPretendida(75); 
+
+    function notaPretendida(nota){
+        var buenas   = Math.trunc( Math.trunc( nota * PregDeTurno.length /  100 )   /   PregDeTurno.length * 100  ) >= nota ? Math.trunc( nota * PregDeTurno.length /  100 )  : Math.trunc( nota * PregDeTurno.length /  100 ) + 1
+        var realNota = buenas / PregDeTurno.length;
+        var malas    = PregDeTurno.length - buenas;
+        var realNotaParteEntera = Math.trunc( realNota * 100 );
+
+        // ImprimirNota(  realNotaParteEntera );    
+        ImprimirNotas2( realNotaParteEntera );     
+        var notasPretendidas =  { bunas :buenas   ,   malas : malas  ,   realNota: realNota   };
+        console.log(notasPretendidas);
+    }
+
+    function ImprimirNotas2(valor){ //Imprime nota en Letra de Maquina. 
+        var nota = document.getElementById('nota_bonita');
+        nota.innerHTML=valor;
+    }
+    
+    // ImprimirNotas2(72);
+
+    function ImprimirNota(valor){
+
+        let centenas = 0;
+        let decenas = 0;
+        let unidades = 0;
+
+        if(valor==100){ centenas= 1;decenas = 0 ; unidades = 0         } else 
+        if(valor>=90 && valor<100 ){decenas = 9 ; unidades = valor - 90} else
+        if(valor>=80 && valor< 90 ){decenas = 8 ; unidades = valor - 80} else
+        if(valor>=70 && valor< 80 ){decenas = 7 ; unidades = valor - 70} else
+        if(valor>=60 && valor< 70 ){decenas = 6 ; unidades = valor - 60} else
+        if(valor>=50 && valor< 60 ){decenas = 5 ; unidades = valor - 50} else
+        if(valor>=40 && valor< 50 ){decenas = 4 ; unidades = valor - 40} else
+        if(valor>=30 && valor< 40 ){decenas = 3 ; unidades = valor - 30} else
+        if(valor>=20 && valor< 30 ){decenas = 2 ; unidades = valor - 20} else
+        if(valor>=10 && valor< 20 ){decenas = 1 ; unidades = valor - 10} else
+        if(valor>=0  && valor< 10 ){decenas = 0 ; unidades = valor - 00}
+
+        let centenasSrc = './notas_examen/' + numeroToTexto(centenas) + getAleatorio_ABC() + '.png';
+        let decenasSrc  = './notas_examen/' + numeroToTexto(decenas)  + getAleatorio_ABC() + '.png';
+        let unidadesSrc = './notas_examen/' + numeroToTexto(unidades) + getAleatorio_ABC() + '.png';
+
+        //VALIDAMOS SI MOSTRAMOS CENTANAS  Y DECENAS :
+        if(valor==100){
+            document.getElementById('centenas').classList.remove('ocultar');
+        }else{
+            document.getElementById('centenas').classList.add('ocultar');    
+        }
+
+        if(valor>=10){
+            document.getElementById('decenas').classList.remove('ocultar');
+        }else{
+            document.getElementById('decenas').classList.add('ocultar');
+        }
+        
+        
+        document.getElementById('centenas').setAttribute( "src" , centenasSrc);
+        document.getElementById('decenas' ).setAttribute( "src" , decenasSrc);
+        document.getElementById('unidades').setAttribute( "src" , unidadesSrc);    
+
+    }
+
+    function numeroToTexto(digito){
+        switch(digito){
+            case 0: return 'cero'   ; break;
+            case 1: return 'uno'    ; break;
+            case 2: return 'dos'    ; break;
+            case 3: return 'tres'   ; break;
+            case 4: return 'cuatro' ; break;
+            case 5: return 'cinco'  ; break;
+            case 6: return 'seis'   ; break;
+            case 7: return 'siete'  ; break;
+            case 8: return 'ocho'   ; break;
+            case 9: return 'nueve'  ; break;
+
+        }
+    }
+
+    function getAleatorio_ABC(){
+        var aleatorio = Math.round(Math.random(1,3)*10);
+        // usando else if si no es menor = pasas al siguiente if directo. 
+        if(aleatorio <= 3 ){return '_a'} else
+        if(aleatorio <= 6 ){return '_b'} else
+        if(6 <  aleatorio ){return '_c'}
+    }
+
+
+
+    </script>
+</html>
+
+
+
+

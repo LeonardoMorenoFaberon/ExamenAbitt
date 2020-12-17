@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tabla_encabezado{
+            display: flex;
+            justify-content: center;
+        }
+        #imgLogoAbit{
+            width: 60px;
+        }
+        .dni_fecha{
+            display: flex;
+            /* width: 200px; */
+            justify-content: space-around;
+            text-align: center;
+        }
+        
+        td div div{
+            width: 200px;
+        }
+        th , td{
+            border: 1px solid bisque;
+        }
+        th{
+            width:  30vw;
+        }
+
+
+
+        
+    </style>
+</head>
+<body>
+    
+    <table class="tabla_encabezado"> 
+
+            <tr>
+               <th>SUPERVISOR DE IZAJE</th>
+               <th ><img id="imgLogoAbit" src="./logoAbitt.png" alt="" ></th>
+               <th>v: 02-2020</th>
+            </tr>
+            <!-- tr>td{dato$} -->
+            <tr>
+                <td>
+                    <div class="participante_titulo">nombre completo:</div><div class="participante_llenar">Ricardo Nava Pezantes</div>
+                </td>
+
+                <td>
+                    <div class="dni_fecha">
+                        <div class="dni">
+                            <div class="dni_titulo">dni:</div><div class="dni_llenar">20154879</div>
+                        </div>
+                        <div class="fecha"> 
+                            <div class="fecha_titulo">fecha:</div> <div class="fecha_llenar">20-02-2020</div>
+                        </div>    
+                    </div>
+                </td>
+
+                <td>
+                    <div class="empresa_titulo">Empresa:</div><div class="empresa_llenar">Confipetrol</div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <div class="fotocheck_titulo">fotocheck:</div><div class="fotocheck_llenar">45692178</div>
+                </td>
+                <td>datoFila22</td>
+                <td>
+                    <div class="firma_titulo">firma:</div><div class="firma_llenar"> assdf</div> 
+                </td>
+            </tr>
+            <!-- tr>td{datoFila3$}*4 -->
+    </table>
+</body>
+</html>
